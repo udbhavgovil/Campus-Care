@@ -1,0 +1,53 @@
+*{
+	box-sizing: border-box;
+}
+#login-button, #signup-button
+{
+	position: relative;
+	top:20px;
+	width:auto;
+	border : 3px solid black;
+	margin : 5px;
+	padding: 5px;
+	height: auto;
+}
+
+.btn .btn-primary .btn-md .active .btn:active
+{
+	background-color: red;
+}
+.active {
+	background-color: cyan;
+}
+.login-form{
+	padding: 25px;
+}
+.reg-form
+{
+	padding: 25px;
+	width: 50%;
+	float: none;
+	position: absolute;
+	top:0px;
+	right: 0px;
+}
+.img-reg
+{
+	margin-top: 10px;
+	margin-left: 30px;
+	height:auto;
+	position: relative;
+	top : 50px;
+	left : 100px;
+}
+#signup
+{
+	position: relative;
+}
+.verifybox
+{
+	margin : 20px;
+	border: 2px solid blue;
+	align-items: center;
+	padding: 20px;	
+}

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Task</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<!-- js script version 2.2.4 online link-->
+		<script src="js/bootstrap.js"></script>
+  		<script src="js/bootstrap.min.js"></script>
+  		<script src ="js/script.js"></script>
+  		<script type="text/javascript" src="fblogin\fb.js"></script>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+
+</head>
+<body>	
+<div id="fb-root"></div>
+	<div id="main" >
+		<div class="container text-center button" >
+		<button  id="login-button" class=" collapsed login btn-md  btn" data-toggle="collapse" data-target="#login" aria-expanded="false" 
+		onclick=" swapsignup()">
+		<span >Login</span>
+		</button>
+		<button   id="signup-button" class="collapsed signup btn-md  btn" data-toggle="collapse" data-target="#signup" aria-expanded="false" onclick="swaplogin()">
+		<span >Signup</span>
+		  </button>
+		</div>
+		<br><br>
+		<div id="login" class="collapse text-center">
+		<div class="tab">
+		<button id="user-btn" class="btn active  btn-md " onclick="switchuserToActive()">New User</button>
+		<button id="admin-btn" class="btn  btn-md " onclick="switchadminToActive()">Admin</button>
+		<br><br>
+		<div class="login-form">
+		<form action="check.php" method="POST">
+		<input type="text" name="domain" value="user" id="ldomain" hidden>
+		<div class="form-group">
+		<label >Email</label>
+    	<input type="email" name="email" class="form-control"  placeholder="Email">
+		</div>
+		<div class="form-group">
+		<label >Password</label>
+    	<input type="password" class="form-control" name="pass" placeholder="Password" required>
+		</div>	
+		<a href="reset.php">(forget password ?)</a>
+		<br>
+		<input  type="submit" value="Login" class="btn btn-warning">
+		</form>
+		</div>
+		</div>
+		<br>
+		<div>
+		<button class="btn btn-primary" onclick="checkLoginState();">Login with FaceBook</button>
+		<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Login with Facebook
+		</fb:login-button> -->
+		<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+		<button class="btn btn-danger">Login with Google</button>
+		</div>
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Login1
+</fb:login-button>
+		</div>
+
+		<div id="signup" class="collapse">
+		<div>
+		<img src="http://ecs2.ecanews.org/wp-content/uploads/2015/02/register-now.png" width=25%  id="register-img" class="img-reg">
+		</div>
+		<div class="reg-form" >
+		<button id="user-btn1" class="btn active  btn-md " onclick="switchuserToActive1()">New User</button>
+		<button id="admin-btn1" class="btn  btn-md " onclick="switchadminToActive1()">Admin</button>
+		<br><br>
+		<form action="register.php" method="POST">
+		<input type="text" name="domain"  id="sdomain" hidden>
+		<div class="form-group">
+		<label >Email</label>
+    	<input type="email" class="form-control" name="email" placeholder="Email">
+		</div>
+		<div class="form-group">
+		<label >Password</label>
+    	<input type="password" class="form-control" name="pass" placeholder="Password" required>
+		</div>	
+		<div class="form-group">
+		<label >First Name</label>
+    	<input type="name" class="form-control" name="fname" placeholder="First Name" required>
+    	</div>
+    	<div>
+    	<label >Last Name</label>
+    	<input type="name" class="form-control" name="lname" placeholder="Last Name" required>
+		</div>
+
+		<label>By registering, you agree to the term and condition.</label>
+		<br>
+		<input  type="submit" value="Register" class="btn btn-warning">
+		</form>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
