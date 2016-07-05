@@ -3,8 +3,10 @@
 <html>
 <head>
 	<title>The Task</title>
+	<meta name="google-signin-client_id" content="62355493202-g8dvskkcesuah909tsq65o53igkdc64a.apps.googleusercontent.com">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -55,19 +57,12 @@
 		<input  type="submit" value="Login" class="btn btn-warning">
 		</form>
 		</div>
+		<div class="g-signin2 text-center" data-onsuccess="onSignIn"></div>
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+		</fb:login-button>
+		</div>
 		</div>
 		<br>
-		<div>
-		<button class="btn btn-primary" onclick="checkLoginState();">Login with FaceBook</button>
-		<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Login with Facebook
-		</fb:login-button> -->
-		<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
-		<button class="btn btn-danger">Login with Google</button>
-		</div>
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Login1
-</fb:login-button>
-		</div>
-
 		<div id="signup" class="collapse">
 		<div>
 		<img src="http://ecs2.ecanews.org/wp-content/uploads/2015/02/register-now.png" width=25%  id="register-img" class="img-reg">
